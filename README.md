@@ -1,2 +1,2 @@
 # Random Password Generator
-Site_link: https://thelokesha.github.io/passwordgenerator/
+Site_link: https://itslokeshx.github.io/passwordgenerator/
