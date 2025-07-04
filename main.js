@@ -1,3 +1,4 @@
+let passowrd;
 function copy() {
   var limit = document.getElementById("length").value;
   if (limit === "" || limit === 0) {
@@ -40,4 +41,18 @@ function copy() {
     document.getElementById("password").style.visibility = "hidden";
     document.getElementById("result").style.visibility = "hidden";
   }
+  copyBtn.innerText = "copy";
 }
+
+var copyBtn = document.getElementById("copyBtn");
+copyBtn.addEventListener("click", () => {
+  var data = document.getElementById("password").innerText;
+  navigator.clipboard
+    .writeText(data)
+    .then(() => {
+      copyBtn.innerText = "copied";
+    })
+    .catch((err) => {
+      alert("failed");
+    });
+});
